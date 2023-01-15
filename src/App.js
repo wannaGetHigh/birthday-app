@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useRef, useState } from 'react';
+
+import Splash from '@core/Splash'
+
+const D_DAY = new Date(2023, 1, 6, 0, 0, 0);
 
 function App() {
+  let timerId = useRef(null);
+  const [timeRemaining, setTimeRemaining]  = useState(D_DAY - new Date());
+
+  useEffect(() => {
+    timerId.current = setTimeout(() => {
+      setTimeRemaining(D_DAY - new Date());
+    }, 1000)
+
+    return () => clearTimeout(timerId.current);
+  }, [timerId.current])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {timeRemaining < 0 ? <div>Hello</div> : <Splash timeRemaining={timeRemaining}/>}
     </div>
   );
 }

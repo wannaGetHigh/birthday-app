@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "@core": "./src/components",
+        "@utils": "./src/utils"
+      }
+    }]
+  ]
+}
