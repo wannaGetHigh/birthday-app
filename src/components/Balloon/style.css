@@ -244,4 +244,10 @@ transform: translate(-15px, 10px) rotate(10deg);
         bottom: -12px;
         left: 20px;
     }
+    .balloon span {
+        top: unset;
+        left: 16%;
+        margin-left: unset;
+        font-size: 2rem;
+    }
 }

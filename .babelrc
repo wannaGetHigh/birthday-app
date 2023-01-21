@@ -3,7 +3,8 @@
     ["module-resolver", {
       "alias": {
         "@core": "./src/components",
-        "@utils": "./src/utils"
+        "@utils": "./src/utils",
+        "@assets": "./src/assets"
       }
     }]
   ]

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import Splash from '@core/Splash'
+import Main from '@core/Main';
 
 const D_DAY = new Date(2023, 1, 6, 0, 0, 0);
 
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      {timeRemaining < 0 ? <div>Hello</div> : <Splash timeRemaining={timeRemaining}/>}
+      {timeRemaining < 0 ? <Main /> : <Splash timeRemaining={timeRemaining}/>}
     </div>
   );
 }

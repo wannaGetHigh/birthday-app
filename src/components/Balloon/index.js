@@ -3,7 +3,7 @@ import './style.css'
 
 const Balloon = () => {
   return (
-    <div class="balloon">
+    <div className="balloon">
         <div><span></span></div>
         <div><span>B</span></div>
         <div><span>D</span></div>

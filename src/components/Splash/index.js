@@ -1,9 +1,10 @@
 import React from 'react'
 
 import zeroPrefix from '@utils/zeroPrefix'
+import Balloon from '@core/Balloon';
 
 import './style.css'
-import Balloon from '@core/Balloon';
+import SparklingStar from '@core/SparklingStar';
 
 const MILLISECOND_OF_DAY = 1000 * 60 * 60 * 24;
  
@@ -19,16 +20,20 @@ const Splash = ({ timeRemaining }) => {
     <section className="countdown">
       <Balloon />
       <div className="countdown__container">
-        <h1 className="countdown__heading">Countdown to Special Day</h1>
+        <h1 className="countdown__heading">
+          <SparklingStar>
+            Countdown to Special Day
+          </SparklingStar>
+        </h1>
         <span className="sr-only" aria-live="polite" data-sr></span>
         <div className="timer" aria-hidden="true">
-          <div className={`timer__card ${hour === 0 ? 'running' : ''}`} data-timer-card="days">
+          <div className={`timer__card ${hour === 0 && minute === 0 && second === 0 ? 'running' : ''}`} data-timer-card="days">
             <span className="timer__card-bg"></span>
             <div className="timer__card-part timer__card-part--front" data-timer-front={zeroPrefix(day)} />
             <div className="timer__card-part timer__card-part--back" data-timer-back={zeroPrefix(day - 1)} />
             <span className="timer__card-name">Days</span>
           </div>
-          <div className={`timer__card ${minute === 0 ? 'running' : ''}`} data-timer-card="hours">
+          <div className={`timer__card ${minute === 0 && second === 0 ? 'running' : ''}`} data-timer-card="hours">
             <span className="timer__card-bg"></span>
             <div className="timer__card-part timer__card-part--front" data-timer-front={zeroPrefix(hour)} />
             <div className="timer__card-part timer__card-part--back" data-timer-back={zeroPrefix(hour - 1)} />
