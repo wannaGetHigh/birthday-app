@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import Splash from '@core/Splash'
 import Main from '@core/Main';
+import NavBar from '@core/NavBar';
 
 const D_DAY = new Date(2023, 1, 6, 0, 0, 0);
 
@@ -10,6 +11,8 @@ function App() {
   const [timeRemaining, setTimeRemaining]  = useState(D_DAY - new Date());
 
   useEffect(() => {
+    if (timeRemaining > 0) return;
+    
     timerId.current = setTimeout(() => {
       setTimeRemaining(D_DAY - new Date());
     }, 1000)
@@ -19,7 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      {timeRemaining < 0 ? <Main /> : <Splash timeRemaining={timeRemaining}/>}
+      {timeRemaining > 0 ? <Main /> : <Splash timeRemaining={timeRemaining}/>}
+      <NavBar />
     </div>
   );
 }

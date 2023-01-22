@@ -1,37 +1,18 @@
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
-
-*, *::before, *::after {
-  box-sizing: border-box;
+:root {
+    --axis-x: 1px;
+    --axis-y: 1rem;
+    --delay: 10;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-orange: #D49C3D;
+    --color-red: #D14B3D;
+    --color-violet: #CF52EB;
+    --color-blue: #44A3F7;
+    --color-green: #5ACB3C;
+    --color-yellow: #DEBF40;
+    --color-foreground: var(--color-white);
 }
-* {
-  margin: 0;
-}
-html, body {
-  height: 100%;
-}
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Red Hat Text", sans-serif;
-}
-html {
-  font-size: 14px;
-}
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-input, button, textarea, select {
-  font: inherit;
-}
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-#root, #__next {
-  isolation: isolate;
+.App {
+    background: linear-gradient(to bottom, #7927b2, #fb3182);
+    min-height: 100vh;
 }
