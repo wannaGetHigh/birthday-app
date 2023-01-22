@@ -30,7 +30,7 @@ const FoldableCard = () => {
             </div>
             <div className={styles.cardInside}>
                 <SparklingStar>
-                    <h3 className={styles.back}>02-06-2023,<br/>HAPPY BIRTHDAY!</h3>
+                    <h3 className={styles.back}>06-02-2023,<br/>HAPPY BIRTHDAY!</h3>
                 </SparklingStar>
                 <p>Gửi em dễ thương,</p>
                 <p>Chúc mừng sinh nhật tới cô gái đáng yêu!</p>
