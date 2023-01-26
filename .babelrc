@@ -4,7 +4,8 @@
       "alias": {
         "@core": "./src/components",
         "@utils": "./src/utils",
-        "@assets": "./src/assets"
+        "@assets": "./src/assets",
+        "@constant": "./src/constant",
       }
     }]
   ]

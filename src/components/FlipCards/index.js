@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import RainbowText from '@core/RainbowText'
 
 import IMG_1095 from '@assets/us/IMG_1095.JPG';
 import IMG_5616 from '@assets/us/IMG_5616.JPG';
@@ -36,13 +38,16 @@ const IMAGES  = [{
 
 const FlipCards = () => {
   return (
-    <section className={styles.main__container}>
-      {IMAGES.map(img => (
-        <div key={img.src} className={styles.img__container}>
-          <FlipCard imgSrc={img.src} message={img.message}/>
-        </div>
-      ))}      
-    </section>
+    <div className={styles.main}>
+      <RainbowText text='HPBD Pé' />
+      <section className={styles.main__container}>
+        {IMAGES.map(img => (
+          <div key={img.src} className={styles.img__container}>
+            <FlipCard imgSrc={img.src} message={img.message}/>
+          </div>
+        ))}      
+      </section>
+    </div>
   )
 }
 

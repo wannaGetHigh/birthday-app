@@ -12,6 +12,8 @@ const BirthdayGift = () => {
 
     useEffect(() => {
         playing ? audio.play() : audio.pause();
+
+        return () => audio.pause();
     }, [playing]);
 
     return (
