@@ -21,17 +21,15 @@ const FoldableCard = () => {
             </div>
             <div className={styles.animatedContainer}>
                 <div className={styles.animatedImg}>
-                    <img src={EmImg} width={100} alt='Em' />
+                    <img src={EmImg} width={100} alt='Em' fetchpriority='high' />
                 </div>
                 <div className={styles.animatedImg}>
-                    <img src={AnhImg} width={120} alt='Anh' />
+                    <img src={AnhImg} width={120} alt='Anh' fetchpriority='high' />
                 </div>
             </div>
             </div>
             <div className={styles.cardInside}>
-                <SparklingStar>
-                    <h3 className={styles.back}>06-02-2023,<br/>HAPPY BIRTHDAY!</h3>
-                </SparklingStar>
+                <h3 className={styles.back}>06-02-2023,<br/>FANCY 24<sup>th</sup> BIRTHDAY!</h3>
                 <p>Gửi em dễ thương,</p>
                 <p>Chúc mừng sinh nhật tới cô gái đáng yêu!</p>
                 <p>Một chặng đường mới phía trước đang chờ đón em. Anh chúc em luôn dễ thương, xinh gái như tuổi 18 và đặc biệt là có thật nhiều niềm vui bên cạnh anh.</p>

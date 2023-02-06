@@ -16,7 +16,7 @@ const FlipCard = ({ imgSrc, message }) => {
           className={`${styles.c} ${styles.back}`}
           style={{ opacity: opacity.to(o => 1 - o), transform }}
         >
-            <img src={imgSrc} alt='Us' />
+            <img src={imgSrc} alt='Us' loading='lazy' />
         </a.div>
         <a.div
           className={`${styles.c} ${styles.front}`}

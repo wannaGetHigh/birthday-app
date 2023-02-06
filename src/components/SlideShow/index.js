@@ -10,6 +10,7 @@ import BalloonImg3 from "@assets/img/balloon3.svg";
 import EmImg from "@assets/img/IMG_6289.JPG";
 import HatImg from "@assets/img/hat.svg";
 import Button from "@core/Button3D";
+import SongAudio from '@assets/audio/betterplace.mp3'
 
 const ideaTextTrans = {
   opacity: 0,
@@ -33,7 +34,10 @@ const SlideShow = () => {
   const handleClick = () => setRerender(!rerender);
 
   useLayoutEffect(() => {
-    if (audioRef.current) audioRef.current.play();
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play()
+    };
 
     let ctx = gsap.context(() => {
       gsap
@@ -270,7 +274,7 @@ const SlideShow = () => {
 
   return (
     <div className="container" ref={slideRef}>
-      <audio ref={audioRef} src="https://vnso-zn-16-tf-mp3-320s1-zmp3.zmdcdn.me/a15988d1c5962cc87587/3203624070102501403?authen=exp=1674920748~acl=/a15988d1c5962cc87587/*~hmac=ee53acfd6e26f01e3d4d5df25b48f6bb&fs=MTY3NDmUsIC0Nzk0ODk2Nnx3ZWJWNnwxMDE4NzEyMDgxfDE4MC45My40OC4yNg" />
+      <audio ref={audioRef} src={SongAudio} loop />
       <div className="one">
         <SparklingStar>
           <h1 className="one">
@@ -279,7 +283,7 @@ const SlideShow = () => {
             </span>
           </h1>
           <p className="two" data-node-name="greetingText">
-            I really like youuu
+            I really like youuu. Nói điêu làm chó
           </p>
         </SparklingStar>
       </div>

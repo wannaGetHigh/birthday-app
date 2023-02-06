@@ -11,6 +11,7 @@ const BirthdayGift = () => {
     const toggle = () => setPlaying(!playing);
 
     useEffect(() => {
+        audio.currentTime = 0;
         playing ? audio.play() : audio.pause();
 
         return () => audio.pause();

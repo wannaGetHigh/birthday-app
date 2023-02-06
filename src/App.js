@@ -32,7 +32,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (timeRemaining > 0) return;
+    if (timeRemaining < 0) return;
     
     timerId.current = setTimeout(() => {
       setTimeRemaining(D_DAY - new Date());
@@ -43,8 +43,8 @@ function App() {
 
   return (
     <div className="App">
-      {timeRemaining > 0 ? <Main /> : <Splash timeRemaining={timeRemaining}/>}
-      <NavBar onClick={setTab} />
+      {timeRemaining < 0 ? <Main /> : <Splash timeRemaining={timeRemaining}/>}
+      {timeRemaining < 0 && <NavBar onClick={setTab} />}
     </div>
   );
 }
